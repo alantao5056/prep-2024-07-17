@@ -73,21 +73,51 @@ tibble(ID = c("1", "2", "...", "10", "11", "...", "N"),
 
 > What are the units, precisely?
 
+the individual resumes from 2024 with names associated with race in us
+
 > What is the moment in time, precisely?
 
+2024
+
 > What is one reason why validity might not hold?
+
+if a name can be percieved as black and white
+People from boston are differennt from people elsewhere
 
 <!-- Assume validity holds, and we can create the Population Table -->
 
 > Describe the Population Table in words
 
+row for each resume, columns are callback if white, callback if black, treatment/control
+
 > What is one reason why stability might not hold?
+
+names can have different meaning overtime. 
+how people much people need jobs at that time vs now
+resume might look different compared to now
+company want to hire diverse people
 
 > What is one reason why representativeness might not hold?
 
+boston and chicago might not represent the whole US
+
 > What is one reason why unconfoundedness might not hold?
+
+number of white names vs black names
+one of the type of names got better resumes than the other
 
 > Describe in words what the Preceptor Table would look like if we were trying to, instead, predict whether or not someone would get a callback?
 
+one potential outcome: callback
+covariate: race
+
 <!-- If time, load up and explore the data.  -->
+
+```{r}
+library(tidyverse)
+
+x <- read_csv("data/resume.csv")
+x
+```
+
   
